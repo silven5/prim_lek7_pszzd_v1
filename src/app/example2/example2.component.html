@@ -1,0 +1,17 @@
+<div class="flex flex-row flex-wrap">
+  <div
+    class="block"
+    *ngFor="let rez of rooms.toArray()"
+    [style.background-color]="rez.priceRoom == 0 ? 'rgb(3, 84, 95)' : ''"
+  >
+    <span class="circleLight"></span>
+    <div class="flex text">
+      <h2>Кімната №{{ rez.number }}</h2>
+      <p>{{ rez.type }}</p>
+      <p>
+        Бронювання з {{ rez.bookingPeriodStart }} по {{ rez.bookingPeriodEnd }}
+      </p>
+      <p>Вартість {{ rez.priceRoom }}</p>
+    </div>
+  </div>
+</div>

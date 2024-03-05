@@ -1,1 +1,106 @@
 /* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: "Playfair";
+    src: url("https://assets.codepen.io/209981/PlayfairDisplay-Regular.ttf");
+}
+
+body {
+    margin: 0;
+    background: linear-gradient(60deg, rgb(41, 29, 90) 0%, rgb(3, 84, 95) 100%);
+}
+
+$body-color: #d9dbf5;
+$font-family: 'Playfair Display',
+    serif;
+$bg-color: #fac2f4;
+$bg-color-dark: #80497f;
+$bg-color-blue: #497280;
+$red: #e74c3c;
+$blue: #3498db;
+
+h1 {
+    font-family: $font-family;
+    font-weight: 300;
+    letter-spacing: 2px;
+    font-size: 48px;
+    color: $body-color;
+}
+
+p {
+    font-family: $font-family;
+    letter-spacing: 1px;
+    font-size: 2vh;
+    color: #333333;
+}
+
+input {
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    border: 0;
+    box-sizing: border-box;
+    font-size: 2vw;
+}
+
+input:focus {
+    border: 2px dashed $bg-color-blue;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.flex-row {
+    flex-direction: row;
+    gap:20px;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.btn {
+    box-sizing: border-box;
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid $red;
+    border-radius: 0.6em;
+    color: $red;
+    cursor: pointer;
+    display: flex;
+    align-self: center;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1;
+    padding: 1.2em 2.8em;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Playfair", serif;
+    font-weight: 700;
+
+    font-size: 1.5vw;
+
+    &:hover,
+    &:focus {
+        color: $bg-color;
+        outline: 0;
+    }
+}
+
+.third {
+    border-color: $bg-color;
+    color: $bg-color-dark;
+    box-shadow: 0 0 40px 40px rgba(255, 251, 251, 0.5) inset,
+        0 0 0 0 rgba(255, 251, 251, 0.5);
+    transition: all 150ms ease-in-out;
+
+    &:hover {
+        box-shadow: 0 0 10px 0 $blue inset, 0 0 10px 4px $blue;
+    }
+}

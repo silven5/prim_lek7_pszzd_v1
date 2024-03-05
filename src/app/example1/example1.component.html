@@ -1,0 +1,25 @@
+<div class="card flex">
+  <div class="card_title__font">
+    <h2>Сервіси приклад №1</h2>
+  </div>
+  <div class="card_body__font flex">
+    Створимо сервіс для роботи зі списком страв DishService
+    <div class="flex">
+      <label position="floating" class="flex" for="a">Назва страви </label>
+      <input
+        class="card_input"
+        type="text"
+        id="a"
+        value="Картопля фрі"
+        #InputDish
+      />
+      <button class="btn third" (click)="addItem(InputDish.value)">
+        Додати
+      </button>
+    </div>
+  </div>
+  <h2 class="card_title__font">Перелік страв</h2>
+  <div class="flex flex-row flex-wrap">
+    <div class="flex box" *ngFor="let rez of items">{{ rez }}</div>
+  </div>
+</div>
